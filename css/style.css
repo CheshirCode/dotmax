@@ -108,7 +108,7 @@ h6 {
    font-weight: inherit;
    font-size: inherit;
 }
-
+-webkit-overflow-scrolling: touch;
 =================================/ОСНОВНОЙ БЛОК/========================================================
 .Revolution-1-hex {
    color: #FF0005;
