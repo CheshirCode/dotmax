@@ -51,13 +51,13 @@ section {
 html,
 body {
    height: 100%;
-   min-width: $minWidth;
+   /* min-width: $minWidth; */
 }
 
 body {
    line-height: 1;
-   font-family: $fontFamily;
-   //text-rendering: optimizeLegibility;
+   font-family: Arial, Helvetica, sans-serif;
+   text-rendering: optimizeLegibility;
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
@@ -66,7 +66,7 @@ body {
 input,
 button,
 textarea {
-   font-family: $fontFamily;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 input::-ms-clear {
@@ -109,8 +109,6 @@ h6 {
    font-size: inherit;
 }
 
-//-webkit-overflow-scrolling: touch;
-
 =================================/ОСНОВНОЙ БЛОК/========================================================
 .Revolution-1-hex {
    color: #FF0005;
@@ -131,10 +129,12 @@ h6 {
 .Revolution-5-hex {
    color: #121212;
 }
+.Revolution-6-hex {
+   color: #3D4772;
+   
+}
 
-color: #3D4772;
-
-/ * {
+ * {
    margin: 0;
    padding: 0;
    border-style: border-box;
@@ -166,7 +166,7 @@ body {
    justify-content: space-between;
 }
 
-.logo {}
+/* .logo {} */
 
 .container {
    max-width: 1180px;
@@ -230,7 +230,7 @@ body {
 }
 
 @media (max-width: 1082px) {
-    .contacts {
+   .contacts {
       position: fixed;
       width: 100vw;
       left: 0;
@@ -251,7 +251,6 @@ body {
 
    .contacts__phone,
    .contacts__mail {
-      /* padding: 10px; */
       flex: 1 1 auto;
       margin: 0 auto;
       border-radius: 5px;
@@ -267,7 +266,6 @@ body {
 }
 
 @media (max-width: 450px) {
-
    .contacts__phone a,
    .contacts__mail a {
       font-size: 10px;
@@ -276,11 +274,12 @@ body {
 
 .contacts__phone a,
 .contacts__mail a {
-   padding: 15px;
+   padding: 10px;
 }
 
 .contacts__phone,
 .contacts__mail {
+   text-align: center;
    padding: 5px;
    margin: 5px;
 }
@@ -291,15 +290,68 @@ body {
    color: #fff;
 }
 
-.icon-phone {}
+/* .icon-phone {}
 
 .contacts__mail {}
 
-.icon-mail {}
+.icon-mail {} */
 
 .greet__block {
-   color: #3D4772;
+   color: #fff;
+   margin: 10px;
+   padding: 0 10px;
+   background: #121212b2;
 }
+
+.article {
+   display: flex;
+}
+.greet__img{
+   flex: 1 1 50vw;
+}
+.main__info{
+   flex: 1 1 50vw;
+   margin: 5px;
+
+}
+
+.greet__title {
+   padding: 10px;
+}
+.greet__title>h2{
+   text-align: center;
+   text-transform: uppercase;
+   color: #FFF28C;
+}
+
+@media (max-width: 768px) {
+   .article {
+   display: block;
+   margin: 0 auto;
+   }
+}
+.main__info p{
+   padding: 10px 10px;
+}
+.article {
+   
+}
+.greet__img{
+   display: block;
+   background-size: cover;
+}
+.greet__img img{
+   height: 40vh;
+   width: 100%;
+   object-position: center;
+   object-fit: cover;
+   border-radius: 7px;
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   -ms-border-radius: 7px;
+   -o-border-radius: 7px;
+}
+
 
 
 @media (max-width: 950px) {
@@ -376,19 +428,14 @@ body {
       transition: all 0.5s ease 0s;
       overflow: auto;
       z-index: 2;
-
    }
 
    .nav.active {
       top: 0;
    }
 
-   .nav__list {}
-
    .nav__item {
-
       font-size: 30px;
-
    }
 
    .nav__list li {
@@ -402,28 +449,66 @@ body {
    }
 }
 
-
-
-
-
-
 .main {
    flex: 1 1 auto;
 }
-
-.greet__block {}
-
-.icon-timed {
-   color: white;
+.container {
+   max-width: 1180px;
+   display: flex;
+   padding: 0 10px;
+   margin: 0 auto;
+}
+.slide {
+   height: 65vh;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+   margin: 5px;
+   cursor: pointer;
+   flex: 1;
+   color: #FFF28C;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: relative;
+   transition: all 0.5s ease-in-out;
+   -webkit-transition: all 0.5s ease-in-out;
+   -moz-transition: all 0.5s ease-in-out;
+   -ms-transition: all 0.5s ease-in-out;
+   -o-transition: all 0.5s ease-in-out;
 }
 
-.icon {
-   max-width: 30px;
-   max-height: 30px;
-   object-fit: cover;
-   fill=#fff
+.slide h3 {
+   position: absolute;
+   font-size: 24px;
+   bottom: 20px;
+   left: 20px;
+   margin: 0;
+   opacity: 0;
 }
 
-.icon-timed {}
+.slide.active {
+   flex: 10;
+}
 
-.footer {}
+.slide.active h3 {
+   opacity: 1;
+   transition: opasity 0.3s ease-in 1s;
+   -webkit-transition: opasity 0.3s ease-in 1s;
+   -moz-transition: opasity 0.3s ease-in 1s;
+   -ms-transition: opasity 0.3s ease-in 1s;
+   -o-transition: opasity 0.3s ease-in 1s;
+}
+
+
+
+
+
+
+.footer {
+   margin-bottom: 70px;
+   color: #FFF28C;
+}
+
