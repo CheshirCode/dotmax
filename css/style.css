@@ -306,7 +306,7 @@ body {
 .greet__title {
    padding: 10px;
 }
-.greet__title>h2{
+.greet__title h2{
    text-align: center;
    text-transform: uppercase;
    color: #FFF28C;
@@ -320,6 +320,7 @@ body {
 }
 .main__info p{
    padding: 10px 10px;
+   line-height: 1.4;
 }
 .article {
    
@@ -329,7 +330,7 @@ body {
    background-size: cover;
 }
 .greet__img img{
-   height: 40vh;
+   height: 60vh;
    width: 100%;
    object-position: center;
    object-fit: cover;
@@ -490,7 +491,71 @@ body {
    -o-transition: opasity 0.3s ease-in 1s;
 }
 
+.vacancies {
+   display: flex;
+   background: #121212b2;
+   margin: 10px;
+   padding: 0 10px;
+}
+.vacancies__img {
+   flex: 1 1 50vw;
+   display: block;
+   background-size: cover;
+}
+.vacancies__img img{
+   
+   height: 60vh;
+   width: 100%;
+   object-position: center;
+   object-fit: cover;
+   border-radius: 7px;
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   -ms-border-radius: 7px;
+   -o-border-radius: 7px;
+}
+.vacancies__text {
+   line-height: 1.4;
+   flex: 1 1 50vw;
+   padding: 10px;
+}
+.vacancies__title>h2 {
+   text-align: center;
+   text-transform: uppercase;
+   color: #FFF28C;
+   padding: 0px 0px 20px 0px;
+}
+.vacansies__body,
+.vacansies__body a {
+   color: #fff;
+   margin: 0px 0px 0px 10px;
 
+}
+.vacansies__body p,
+.vacansies__body li{
+   padding: 0px 0px 0px 20px;
+}
+.icon-truck_front {
+   color: #fff;
+}
+
+@media (max-width:768px) {
+   .vacancies {
+      display: block;
+      margin: 0 auto;
+   }
+   #vacancies .container{
+      display: flex;
+      flex-direction: column;
+   }
+   .vacancies__img{
+      order: 1;
+   }
+   .vacancies__text{
+      order: 2;
+   }
+
+}
 
 
 
