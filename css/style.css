@@ -136,6 +136,7 @@ body {
    background-position: center;
    font-family: Arial, Helvetica, sans-serif;
    color: #959595;
+   line-height: 1.2;
 }
 
 .wrapper {
@@ -478,10 +479,12 @@ body {
 }
 
 .slide.active {
+   border: 2px solid #FFF28C;
    flex: 10;
 }
 
 .slide.active h3 {
+   
    opacity: 1;
    transition: opasity 0.3s ease-in 1s;
    -webkit-transition: opasity 0.3s ease-in 1s;
@@ -489,7 +492,69 @@ body {
    -ms-transition: opasity 0.3s ease-in 1s;
    -o-transition: opasity 0.3s ease-in 1s;
 }
+.popup {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background: #3d4772d7;
+   top: 90%;
+   left: 0;
+}
+.popup:target{
+   opacity: 0;
+   visibility: hidden;
+}
+.container {
+}
+.popup__body {
+   min-height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 5px;
+   position: relative;
+}
 
+.popup__close {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 30px;
+   font-weight: bold;
+   color: #FF0005;
+   cursor: pointer;
+}
+.popup__title {
+   color: #FFF28C;
+   padding: 10px;
+}
+.popup__text {
+   font-size: 15px;
+   color: #fff;
+   padding: 0 30px;
+   
+}
+.popup__text a{
+   color: #000;
+   text-decoration: underline;
+}
+@media (max-width:330px){
+   .popup{
+      top: 70%;
+   }
+   .popup__title{
+      padding: 5px;
+   }
+
+   .popup__body {
+      display: block;
+      padding: 5px;
+   }
+   .popup__text {
+      padding: 0 5px;
+      overflow-y: auto;
+   }
+}
 
 .footer {
    display: flex;
@@ -498,8 +563,23 @@ body {
    color: #FFF28C;
    background: #121212b2;
 }
+
 .footer__logo {
-   flex: 0 1 50%;
+   
+   flex: 0 1 15%;
+   display: flex;
+}
+.footer__text {
+   flex: 1 1 auto;
+   padding: 20px 10px;
+   line-height: 1.2;
+}
+.footer__text p{
+   padding: 5px;
+}
+.footer__text a{
+   text-decoration: underline;
+   color: #fff;
 }
 
 .privacy {
@@ -509,14 +589,15 @@ body {
    -moz-border-radius: 5px;
    -ms-border-radius: 5px;
    -o-border-radius: 5px;
+   
 }
 .privacy__body {
    background: #121212b2;
    color: #fff;
-
+padding: 20px 10px;
 }
 .privacy__title {
-   margin: 20px 0;
+   margin: 20px 0 10px;
    text-transform: uppercase;
    
 }
@@ -527,6 +608,10 @@ body {
    text-decoration: underline;
    color: #fff;
    line-height: 1.2;
-
-
+}
+@media (max-width: 330px) {
+   .footer .container{
+      display: block;
+      
+   }
 }
