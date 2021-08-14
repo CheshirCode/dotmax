@@ -53,7 +53,8 @@
                 <div class="container">
                     <article class="article">
                         <div class="greet__img">
-                            <img src="https://cdn.pixabay.com/photo/2020/04/03/04/48/forklift-4997426_960_720.jpg" alt="склад" />
+                            <img src="https://cdn.pixabay.com/photo/2020/04/03/04/48/forklift-4997426_960_720.jpg"
+                                alt="склад" />
                         </div>
                         <div class="main__info">
                             <div class="greet__title">
@@ -108,6 +109,77 @@
                     </div>
                 </div>
             </div>
+            <div class="vacancies" id="vacancies">
+                <div class="container">
+                    <div class="vacancies__text">
+                        <div class="vacancies__title">
+                            <h2>Открыты вакансии</h2>
+                        </div>
+                        <div class="vacansies__body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quae corrupti hic animi
+                                doloremque explicabo? Non sed debitis corrupti tempora.</p>
+                            <ul>
+                                <li class="icon-truck_front"> Специалист широкого профиля</li>
+                                <li class="icon-truck_front"> Специалист широкого профиля</li>
+                                <li class="icon-truck_front"> Специалист широкого профиля</li>
+                                <li class="icon-truck_front"> Специалист широкого профиля</li>
+                                <li class="icon-truck_front"> Специалист широкого профиля</li>
+                            </ul>
+                            <p>Подробную информацию по интересующей Вас вакансии Вы можете узнать по тел: <a
+                                    href="tel:+78123396037">+7(812) 339-60-37</a></p>
+                        </div>
+                    </div>
+                    <div class="vacancies__img">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/17/10/49/bulletin-board-3233643_960_720.jpg"
+                            alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="feedback">
+
+                <div class="form">
+                    <form action="#" id="form" class="form__body" method="post">
+                        <h2 class="feedback">Остались вопросы? Напишите нам...</h2>
+                        <div class="form__item">
+                            <label for="formName" class="form__label">Имя*:</label>
+                            <input placeholder="Иван Иванов" type="text" name="name" id="formName" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <label for="formEmail" class="form__label">E-mail*:</label>
+                            <input placeholder="user@youremail.com" type="text" name="email" id="formEmail"
+                                class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <label for="formMessage" class="form__label">Сообщение:</label>
+                            <textarea placeholder="Введите Ваш текст сообщения..." name="message" id="formMessage"
+                                class="form__input"></textarea>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__label">Прикрепить фото (скриншот):</div>
+                            <div class="file">
+                                <div class="file__item">
+                                    <input accept=".jpg, .png, .gif" type="file" name="image" class="file__input"
+                                        id="formImage">
+                                    <div class="file__button">Выбрать</div>
+                                </div>
+                                <div class="file__preview"></div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <div class="form__checkbox">
+                                <input type="checkbox" checked name="agreement" id="formAgreement"
+                                    class="checkbox__input">
+                                <label for="formAgreement" class="checkbox__label"><span>Нажимая кнопку, я безоговорочно
+                                        принимаю <a href="/privacy/privacy.html">политику конфиденциальности</a> и даю
+                                        свое согласие на обработку персональных данных</span></label>
+                            </div>
+                        </div>
+                        <button type="submit" class="form__button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
         </main>
         <footer class="footer">
             <div class="container">
@@ -117,19 +189,23 @@
                         <div class="logo__title">dotmax</div>
                         <div class="logo__subtitle">cargo operations</div>
                     </div>
-                    
+
                 </div>
                 <div class="footer__text">
-                        <p>ООО "Дотмакс карго оперейшнз", 2016-2021 &#169</p>
-                        <p>ИНН: 4725002718 <a href="https://egrul.nalog.ru/index.html">Проверить</a></p>
-                        <p>КПП: 472501001 <a href="https://egrul.nalog.ru/index.html">Проверить</a></p>
-                        <p>ОГРН: 1164704063567 <a href="https://service.nalog.ru/uwsfind.do">Проверить</a></p>
-                        <p>ОКПО: 04854928 <a href="https://websbor.gks.ru/online/info">Проверить</a> </p> 
-                    </div>
+                    <p>ООО "Дотмакс карго оперейшнз", 2016-2021 &#169</p>
+                    <p>ИНН: 4725002718 <a href="https://egrul.nalog.ru/index.html">Проверить</a></p>
+                    <p>КПП: 472501001 <a href="https://egrul.nalog.ru/index.html">Проверить</a></p>
+                    <p>ОГРН: 1164704063567 <a href="https://service.nalog.ru/uwsfind.do">Проверить</a></p>
+                    <p>ОКПО: 04854928 <a href="https://websbor.gks.ru/online/info">Проверить</a> </p>
+                </div>
                 <div class="privacy">
                     <div class="privacy__body">
                         <div class="privacy__title">Политика конфиденциальности</div>
-                        <div class="privacy__text">Обработка персональных данных Пользователей проводится в соответствии с <a href="/privacy/privacy.html" class="privacy">Политикой конфиденциальности</a>. Вы можете получить любые разъяснения по интересующим вопросам, касающимся обработки Ваших персональных данных, обратившись к нам с помощью электронной почты <a href="mailto:privacy@dotmax-cargo.ru">privacy@dotmax-cargo.ru</a></div>
+                        <div class="privacy__text">Обработка персональных данных Пользователей проводится в соответствии
+                            с <a href="/privacy/privacy.html" class="privacy">Политикой конфиденциальности</a>. Вы
+                            можете получить любые разъяснения по интересующим вопросам, касающимся обработки Ваших
+                            персональных данных, обратившись к нам с помощью электронной почты <a
+                                href="mailto:privacy@dotmax-cargo.ru">privacy@dotmax-cargo.ru</a></div>
                     </div>
                 </div>
             </div>

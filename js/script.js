@@ -32,3 +32,4 @@ function slidesPlugin(activeSlide) {
   }
 }
 slidesPlugin(0)
+
