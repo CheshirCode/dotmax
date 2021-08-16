@@ -323,14 +323,16 @@ body {
 .main__info {
    flex: 1 1 50vw;
    margin: 5px;
-
 }
-
+.main__info p {
+   padding: 0px 0px 10px 20px;
+}
 .greet__title {
-   padding: 10px;
+   padding: 10px 20px;
 }
 
 .greet__title>h2 {
+   padding: 20px 0px 20px 0px;
    text-align: center;
    text-transform: uppercase;
    color: #FFF28C;
@@ -555,7 +557,7 @@ body {
    text-align: center;
    text-transform: uppercase;
    color: #FFF28C;
-   padding: 0px 0px 10px 0px;
+   padding: 20px 0px 20px 0px;
 }
 
 .vacansies__body,
@@ -567,7 +569,7 @@ body {
 
 .vacansies__body p,
 .vacansies__body li {
-   padding: 0px 0px 0px 10px;
+   padding: 0px 0px 10px 10px;
 }
 
 .icon-truck_front {
@@ -611,6 +613,27 @@ body {
 
 .form__body {
    margin: 0 5px;
+   position: relative;
+}
+.form__body::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #121212b2 url('../img/loading.gif') center / 100px no-repeat;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.5s ease 0s;
+   -webkit-transition: all 0.5s ease 0s;
+   -moz-transition: all 0.5s ease 0s;
+   -ms-transition: all 0.5s ease 0s;
+   -o-transition: all 0.5s ease 0s;
+}
+.form__body._sending::after {
+   opacity: 1;
+   visibility: visible;
 }
 
 .form__item {
@@ -631,6 +654,9 @@ body {
 
 .form__input:focus{
    box-shadow: 0 0 10px #FFF28C;
+}
+.form__input._error {
+   box-shadow: 0 0 10px #FF0005;
 }
 
 textarea.form__input {
@@ -678,6 +704,7 @@ textarea.form__input {
 }
 
 .file__preview {
+   margin: 10px;
    display: inline-block;
    max-width: 150px;
 }
@@ -687,6 +714,9 @@ textarea.form__input {
 }
 
 .form__checkbox {}
+.form__checkbox._error .checkbox__label::before {
+   box-shadow: 0 0 10px #FF0005;
+}
 
 .checkbox__input {
    display: none;

@@ -139,16 +139,16 @@
             <div class="feedback" id="feedback">
 
                 <div class="form">
-                    <form action="#" id="form" class="form__body" method="post">
+                    <form action="#" id="form" enctype="multipart/form-data" class="form__body" method="post">
                         <h2 class="feedback">Остались вопросы? Напишите нам...</h2>
                         <div class="form__item">
                             <label for="formName" class="form__label">Имя*:</label>
-                            <input placeholder="Иван Иванов" type="text" name="name" id="formName" class="form__input">
+                            <input placeholder="Иван Иванов" type="text" name="name" id="formName" class="form__input _required">
                         </div>
                         <div class="form__item">
                             <label for="formEmail" class="form__label">E-mail*:</label>
                             <input placeholder="user@youremail.com" type="text" name="email" id="formEmail"
-                                class="form__input">
+                                class="form__input _required _email">
                         </div>
                         <div class="form__item">
                             <label for="formMessage" class="form__label">Сообщение:</label>
@@ -163,13 +163,13 @@
                                         id="formImage">
                                     <div class="file__button">Выбрать</div>
                                 </div>
-                                <div class="file__preview"></div>
+                                <div id="formPreview"  class="file__preview"></div>
                             </div>
                         </div>
                         <div class="form__item">
                             <div class="form__checkbox">
                                 <input type="checkbox" checked name="agreement" id="formAgreement"
-                                    class="checkbox__input">
+                                    class="checkbox__input _required">
                                 <label for="formAgreement" class="checkbox__label"><span>Нажимая кнопку, я безоговорочно
                                         принимаю <a href="/privacy/privacy.html">политику конфиденциальности</a> и даю
                                         свое согласие на обработку персональных данных</span></label>
