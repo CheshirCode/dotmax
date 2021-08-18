@@ -1,4 +1,4 @@
-"use strict"
+
 
 const menuButton = document.querySelector(".header__burger");
 const menuButton1 = document.querySelector(".nav");
